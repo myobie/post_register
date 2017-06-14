@@ -3,7 +3,7 @@ defmodule PostRegister.Web.LogsController do
   alias PostRegister.Blogs
 
   def show(conn, %{"id" => id}) do
-    log = Blogs.get_log!(id)
+    log = Blogs.find_log(id: id)
     posts = Blogs.list_posts(log)
 
     conn

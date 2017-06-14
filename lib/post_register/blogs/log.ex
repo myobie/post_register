@@ -9,13 +9,14 @@ defmodule PostRegister.Blogs.Log do
 
     field :name, :string
     field :email_address, :string
+    field :from_email_addresses, {:array, :string}
 
     timestamps()
   end
 
   def changeset(%Log{} = log, attrs) do
     log
-    |> cast(attrs, [:name, :email_address])
+    |> cast(attrs, [:name, :email_address, :from_email_addresses])
     |> validate_required([:name, :email_address])
   end
 end
