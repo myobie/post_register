@@ -17,6 +17,8 @@ defmodule PostRegister.Web.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+
+    resources "/logs", LogsController, only: [:show]
   end
 
   scope "/emails", PostRegister.Web do
