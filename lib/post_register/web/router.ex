@@ -19,6 +19,10 @@ defmodule PostRegister.Web.Router do
     get "/", PageController, :index
   end
 
+  scope "/emails", PostRegister.Web do
+    post "/callback", EmailsController, :callback
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", PostRegister.Web do
   #   pipe_through :api
