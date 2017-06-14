@@ -10,6 +10,5 @@ defmodule PostRegister.Repo.Migrations.CreatePostRegister.Blogs.Post do
 
       timestamps()
     end
-
   end
 end

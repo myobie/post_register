@@ -6,6 +6,7 @@ defmodule PostRegister.Blogs.Post do
 
   schema "posts" do
     belongs_to :log, Log
+
     field :from, :string
     field :html, :string
     field :subject, :string
@@ -15,8 +16,8 @@ defmodule PostRegister.Blogs.Post do
 
   def changeset(%Post{} = post, attrs) do
     post
-    |> cast(attrs, [:log_id, :subject, :from, :html])
-    |> foreign_key_constraint(:log_id)
+    |> cast(attrs, [:subject, :from, :html])
     |> validate_required([:subject, :from, :html])
+    |> foreign_key_constraint(:log_id)
   end
 end

@@ -6,6 +6,7 @@ defmodule PostRegister.Blogs.Log do
 
   schema "logs" do
     has_many :posts, Post
+
     field :name, :string
     field :email_address, :string
 
