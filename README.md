@@ -1,5 +1,11 @@
 # PostRegister
 
+## License
+
+<https://nathan.mit-license.org/>
+
+## Development
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
