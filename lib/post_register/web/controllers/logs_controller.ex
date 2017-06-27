@@ -7,6 +7,8 @@ defmodule PostRegister.Web.LogsController do
     posts = Blogs.list_posts(log)
 
     conn
-    |> render("show.html", log: log, posts: posts)
+    |> assign(:log, log)
+    |> assign(:posts, posts)
+    |> render("show.html")
   end
 end

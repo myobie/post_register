@@ -1,0 +1,12 @@
+<h1>Log: <%= @log.name %></h1>
+
+<ol>
+  <%= for post <- @posts do %>
+    <li>
+      <%= post.subject %>
+      <div>
+        <%= raw post.html %>
+      </div>
+    </li>
+  <% end %>
+</ol>

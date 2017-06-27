@@ -15,5 +15,5 @@ alias PostRegister.Blogs
 Blogs.create_log(%{
                    name: "Test Log",
                    email_address: "c114c6cf8d66802c5e2f@cloudmailin.net",
-                   from_email_addresses: ["naherald@microsoft.com"]
+                   from_email_addresses: ["naherald@microsoft.com", "me@nathanherald.com"]
                  })
